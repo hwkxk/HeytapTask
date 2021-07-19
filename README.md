@@ -10,6 +10,8 @@
 * [x] 每日点推送任务
 * [x] 可选 钉钉通知、Tg通知、pushplus推送加、企业微信、Bark通知、IFTTT通知 功能
 
+[![W8j59K.jpg](https://z3.ax1x.com/2021/07/19/W8j59K.jpg)](https://imgtu.com/i/W8j59K)
+
 ## 使用方式
 > 本项目使用 python3 实现
 #### 1、下载本项目 左上 CODE - Download ZIP 或 [点此下载](https://github.com/hwkxk/HeytapTask/archive/refs/heads/main.zip)
