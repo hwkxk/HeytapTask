@@ -315,7 +315,7 @@ def main(event, context):
         daily_viewpush() #执行每日点推送任务
 
     if users.has_option("dingding", 'dingtalkWebhook'):
-        notify.sendDing(users.get("dingding","dingtalkWebhook")) #钉钉推送日记          
+        notify.sendDing(users.get("dingding","dingtalkWebhook"),users.get("dingding","dingtalksecret")) #钉钉推送日记
     if users.has_option("telegramBot", 'tgToken'):
         notify.sendTg(users.get("telegramBot","tgToken"),users.get("telegramBot","tgUserId"),users.get("telegramBot","tghost")) #TG机器人推送日记
     if users.has_option("pushplus", 'pushplusToken'):
