@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
-import smtplib,traceback,os,requests,urllib,json
+import smtplib,traceback,os,requests,urllib,json,hmac,hashlib,base64,time
 from email.mime.text import MIMEText
+from urllib import parse
 
 #返回要推送的通知内容
 #对markdown的适配要更好
@@ -61,8 +62,17 @@ def sendEmail(email):
         print(traceback.format_exc())
 
 #钉钉群自定义机器人推送
-def sendDing(webhook):
+def sendDing(webhook,secret):
     try:
+        timestamp = str(round(time.time() * 1000))
+        if secret != None: #钉钉机器人设置 加签 - 密钥
+            timestamp = str(round(time.time() * 1000))
+            secret_enc = secret.encode('utf-8')
+            string_to_sign = '{}\n{}'.format(timestamp, secret)
+            string_to_sign_enc = string_to_sign.encode('utf-8')
+            hmac_code = hmac.new(secret_enc, string_to_sign_enc, digestmod=hashlib.sha256).digest()
+            sign = urllib.parse.quote_plus(base64.b64encode(hmac_code))
+            webhook = webhook + "&timestamp=" + timestamp + "&sign=" + sign
         content = readFile('./log.txt')
         data = {
             'msgtype': 'markdown',
