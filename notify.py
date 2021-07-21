@@ -107,7 +107,7 @@ def sendTg(tgToken,tgUserId,tghost):
         #token = os.environ.get('TG_TOKEN')
         #用户的ID
         #chat_id = os.environ.get('TG_USERID')
-        if cf_host == None:
+        if tghost == None:
             url = f'https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={content}'     
         else:
             url = f'https://{tghost}/bot{token}/sendMessage?chat_id={chat_id}&text={content}' 
