@@ -119,7 +119,7 @@ def daySign_task():
                     logger.info('【每日签到失败】: ' + str(res1))
             else:
                 print(str(qd['credits']),str(qd['type']),str(qd['gift']))
-                if len(qd['type']) == 0:
+                if qd['type'] == None:
                     data = "amount=" + str(qd['credits'])
                 else:
                     data = "amount=" + str(qd['credits']) + "&type=" + str(qd['type']) + "&gift=" + str(qd['gift'])
