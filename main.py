@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2021/7/15
+# @Time    : 2021/8/17
 # @Author  : hwkxk(丶大K丶)
 # @Email   : k@hwkxk.cn
 
@@ -158,7 +158,7 @@ def daily_viewgoods():
             if data['name'] == '浏览商品':
                 qd = data
         if qd['completeStatus'] == 0:
-            shopList = client.get('https://msec.opposhop.cn/goods/v1/SeckillRound/goods/3016?pageSize=12&currentPage=1')
+            shopList = client.get('https://msec.opposhop.cn/goods/v1/SeckillRound/goods/115?pageSize=10&currentPage=1')
             res = shopList.json()
             if res['meta']['code'] == 200:
                 for skuinfo in res['detail']:
@@ -166,6 +166,7 @@ def daily_viewgoods():
                     print('正在浏览商品ID：', skuid)
                     client.get('https://msec.opposhop.cn/goods/v1/info/sku?skuId='+ str(skuid), headers=headers)
                     time.sleep(5)
+                    
                 res2 = cashingCredits(qd['marking'],qd['type'],qd['credits'])
                 if res2 == True:
                     logger.info('【每日浏览商品】: ' + '任务完成！积分领取+' + str(qd['credits']))
