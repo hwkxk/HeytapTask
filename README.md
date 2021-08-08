@@ -14,7 +14,7 @@
 
 ## 使用方式
 ### 本地执行
-> 本项目使用 python3 实现
+> 本项目使用 python3 实现 (3.6以上版本)
 #### 1、下载本项目 左上 CODE - Download ZIP 或 [点此下载](https://github.com/hwkxk/HeytapTask/archive/refs/heads/main.zip)
 #### 2、解压后用文本编辑器 打开`config.ini`按注释说明进行填写
 #### 3、需要安装的依赖
