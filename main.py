@@ -313,7 +313,7 @@ def main(event, context):
         daySign_task() #执行每日签到
         daily_viewgoods() #执行每日商品浏览任务
         daily_sharegoods() #执行每日商品分享任务
-        daily_viewpush() #执行每日点推送任务
+        #daily_viewpush() #执行每日点推送任务 该任务在2021-9-16下线 注释
 
     if users.has_option("dingding", 'dingtalkWebhook'):
         notify.sendDing(users.get("dingding","dingtalkWebhook"),users.get("dingding","dingtalksecret")) #钉钉推送日记
