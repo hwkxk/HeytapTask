@@ -7,7 +7,7 @@
 * [x] 每日签到
 * [x] 每日浏览商品任务
 * [x] 每日分享商品任务
-* [x] 每日点推送任务
+* [x] 每̶日̶点̶推̶送̶任̶务̶ 2021-9-16 下线
 * [x] 可选 钉钉通知、Tg通知、pushplus推送加、企业微信、Bark通知、IFTTT通知 功能
 
 [![W8j59K.jpg](https://z3.ax1x.com/2021/07/19/W8j59K.jpg)](https://imgtu.com/i/W8j59K)
@@ -28,6 +28,8 @@ pip install requests
 
 #### 注意：不要fork后将个人信息填写到自己仓库`config.ini`文件中，请下载到本地编辑，以免隐私泄露。
 #### cookies 和 User-Agent 信息请自行在手机登录 `欢太商城` APP后使用HttpCanary等抓包工具获取！
+#### 请一定填好与登录cookie一致的机型信息的UA，不要用默认配置里面的UA，如果登录的UA不同cookie会被失效！
+
 > 具体抓包方法：[欢太商城HttpCanary抓包教程](https://github.com/hwkxk/HeytapTask/wiki/%E6%AC%A2%E5%A4%AA%E5%95%86%E5%9F%8EHttpCanary%E6%8A%93%E5%8C%85%E6%95%99%E7%A8%8B)
 
 
