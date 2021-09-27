@@ -158,7 +158,7 @@ def daily_viewgoods():
             if data['name'] == '浏览商品':
                 qd = data
         if qd['completeStatus'] == 0:
-            shopList = client.get('https://msec.opposhop.cn/goods/v1/SeckillRound/goods/115?pageSize=10&currentPage=1')
+            shopList = client.get('https://msec.opposhop.cn/goods/v1/SeckillRound/goods/115?pageSize=12&currentPage=1')
             res = shopList.json()
             if res['meta']['code'] == 200:
                 for skuinfo in res['detail']:
